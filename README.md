@@ -21,16 +21,6 @@ conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=10
 pip install -r requirements.txt
 ```
 
-### Datasets
-1. Follow instructions in the `./refer` directory to set up subdirectories
-and download annotations.
-This directory is a git clone (minus two data files that we do not need)
-from the [refer](https://github.com/lichengunc/refer) public API.
-
-2. Download images from [COCO](https://cocodataset.org/#download).
-Please use the first downloading link *2014 Train images [83K/13GB]*, and extract
-the downloaded `train_2014.zip` file to `./refer/data/images/mscoco/images`.
-
 ### The Initialization Weights for Training
 1. Create the `./pretrained_weights` directory where we will be storing the weights.
 ```shell
@@ -40,3 +30,8 @@ mkdir ./pretrained_weights
 the Swin Transformer](https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_base_patch4_window12_384_22k.pth),
 and put the `pth` file in `./pretrained_weights`.
 These weights are needed for training to initialize the model.
+
+## Training
+
+CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node 4 --master_port 12345 train.py  --model_id RMSIN --batch-size 8 --lr 0.00005 --wd 1e-2 --swin_type base --pretrained_swin_weights ./pretrained_weights/swin_base_patch4_window12_384_22k.pth --epochs 40 --img_size 480 2>&1 | tee ./models/output
+
