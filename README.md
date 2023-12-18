@@ -1,5 +1,6 @@
 # RMSIN
 This repository is the offical implementation for "Rotated Multi-Scale Interaction Network for Referring Remote Sensing Image Segmentation."
+![Pipeline Image](pipeline.pdf)
 
 ## Setting Up
 ### Preliminaries
@@ -9,8 +10,8 @@ The code has been verified to work with PyTorch v1.7.1 and Python 3.7.
 ### Package Dependencies
 1. Create a new Conda environment with Python 3.7 then activate it:
 ```shell
-conda create -n lavt python==3.7
-conda activate lavt
+conda create -n RMSIN python==3.7
+conda activate RMSIN
 ```
 
 2. Install PyTorch v1.7.1 with a CUDA version that works on your cluster/machine (CUDA 10.2 is used in this example):
@@ -24,7 +25,7 @@ pip install -r requirements.txt
 ```
 ### Datasets
 1. Dowload our proposed dataset RRSIS-D from.
-2. Follw the [] to set up directory.
+2. Follow the [refer](https://github.com/lichengunc/refer) to set up data directory.
 ### The Initialization Weights for Training
 1. Create the `./pretrained_weights` directory where we will be storing the weights.
 ```shell
@@ -46,4 +47,4 @@ python test.py --split val --window12 --img_size 480
 ```
 
 ## Acknowledgements
-Code in this repository is built on . We'd like to thank for open sourcing their project.
+Code in this repository is built on [LAVT](https://github.com/yz93/LAVT-RIS). We'd like to thank for open sourcing their project.
