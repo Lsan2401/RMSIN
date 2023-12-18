@@ -1,6 +1,6 @@
 # RMSIN
 This repository is the offical implementation for "Rotated Multi-Scale Interaction Network for Referring Remote Sensing Image Segmentation."
-![Pipeline Image](pipeline.pdf)
+![Pipeline Image](pipeline.jpg)
 
 ## Setting Up
 ### Preliminaries
