@@ -41,7 +41,7 @@ We perform all experiments on our proposed dataset RRSIS-D. RRSIS-D is a new Ref
 ```
 $DATA_PATH
 ├── rrsisd
-│   ├── refs(unc).json
+│   ├── refs(unc).p
 │   ├── instances.json
 └── images
     └── rrsisd
