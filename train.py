@@ -188,7 +188,7 @@ def train_one_epoch(model, criterion, optimizer, data_loader, lr_scheduler, epoc
         lr_scheduler.step()
 
 
-        torch.cuda.synchronize()# 同步Gpu状态的函数
+        torch.cuda.synchronize()
         # train_loss += loss.item()
         iterations += 1
         metric_logger.update(loss=loss.item(), lr=optimizer.param_groups[0]["lr"])
