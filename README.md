@@ -34,10 +34,10 @@ and put the `pth` file in `./pretrained_weights`.
 These weights are needed for training to initialize the model.
 
 ## Datasets
-We perform all experiments on our proposed dataset RRSIS-D. RRSIS-D is a new Referring Remote Sensing Image Segmentation benchmark which contained 17,402 image-caption-mask triplets.  You can get the RRSIS-D dataset from [RRSIS-D]().
+We perform all experiments on our proposed dataset RRSIS-D. RRSIS-D is a new Referring Remote Sensing Image Segmentation benchmark which containes 17,402 image-caption-mask triplets.  It can be downloaded from [RRSIS-D]().
 ### Usage
-1. Dowload our dataset.
-2. Copy all the downloaded file to `./refer/data/`. The dataset folder should be like this:
+1. Download our dataset.
+2. Copy all the downloaded files to `./refer/data/`. The dataset folder should be like this:
 ```
 $DATA_PATH
 ├── rrsisd
@@ -47,7 +47,7 @@ $DATA_PATH
     └── rrsisd
         ├── JPEGImages
         ├── ann_split
-        
+
 ```
    
 ## Training
@@ -61,4 +61,4 @@ python test.py --split val --window12 --img_size 480
 ```
 
 ## Acknowledgements
-Code in this repository is built on [LAVT](https://github.com/yz93/LAVT-RIS). We'd like to thank for open sourcing their project.
+Code in this repository is built on [LAVT](https://github.com/yz93/LAVT-RIS). We'd like to thank the authors for open sourcing their project.
