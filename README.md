@@ -22,7 +22,9 @@ conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=10
 ```shell
 pip install -r requirements.txt
 ```
-
+### Datasets
+1. Dowload our proposed dataset RRSIS-D from.
+2. Follw the [] to set up directory.
 ### The Initialization Weights for Training
 1. Create the `./pretrained_weights` directory where we will be storing the weights.
 ```shell
@@ -38,10 +40,10 @@ These weights are needed for training to initialize the model.
 CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node 4 --master_port 12345 train.py  --pretrained_swin_weights ./pretrained_weights/swin_base_patch4_window12_384_22k.pth --epochs 40 --img_size 480 2>&1 | tee ./models/output
 ```
 
-##Testing
+## Testing
 ```shell
 python test.py --split val --window12 --img_size 480
 ```
 
-##Acknowledgements
+## Acknowledgements
 Code in this repository is built on . We'd like to thank for open sourcing their project.
