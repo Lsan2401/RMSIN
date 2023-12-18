@@ -34,8 +34,8 @@ and put the `pth` file in `./pretrained_weights`.
 These weights are needed for training to initialize the model.
 
 ## Datasets
-We perform all experiments on our proposed dataset RRSIS-D. RRSIS-D is a new Referring Remote Sensing Image Segmentation benchmark which contained 17,402 image-caption-mask triplets.  You can get the RRSIS-D dataset from [RRSIS-D]():
-###Usage
+We perform all experiments on our proposed dataset RRSIS-D. RRSIS-D is a new Referring Remote Sensing Image Segmentation benchmark which contained 17,402 image-caption-mask triplets.  You can get the RRSIS-D dataset from [RRSIS-D]().
+### Usage
 1. Dowload our dataset.
 2. Copy all the downloaded file to `./refer/data/`. The dataset folder should be like this:
 ```
