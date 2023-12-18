@@ -1,4 +1,6 @@
 # RMSIN
+This repository is the offical implementation for "Rotated Multi-Scale Interaction Network for Referring Remote Sensing Image Segmentation."
+
 ## Setting Up
 ### Preliminaries
 The code has been verified to work with PyTorch v1.7.1 and Python 3.7.
