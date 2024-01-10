@@ -80,12 +80,7 @@ class ScaleAwareGate(nn.Module):
 
 
 class Attention(torch.nn.Module):
-    def __init__(self, dim, img_shape, att_shape,
-                 key_dim=32,
-                 num_heads=8,
-                 attn_ratio=2,
-                 activation=torch.nn.Hardswish,
-                 resolution=14):
+    def __init__(self, dim, img_shape, att_shape, key_dim=32, num_heads=8, attn_ratio=2, activation=torch.nn.Hardswish):
         super().__init__()
         self.num_heads = num_heads
         self.scale = key_dim ** -0.5
@@ -96,7 +91,7 @@ class Attention(torch.nn.Module):
         self.dh = int(attn_ratio * key_dim) * num_heads
         self.attn_ratio = attn_ratio
         h = self.dh + nh_kd * 2
-        self.qkv = Linear_BN(dim, h, resolution=resolution)
+        self.qkv = Linear_BN(dim, h)
 
         self.parallel_conv = nn.Sequential(
             nn.Hardswish(inplace=False),
