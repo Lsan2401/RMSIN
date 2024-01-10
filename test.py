@@ -23,7 +23,7 @@ import torch.nn.functional as F
 
 
 def get_dataset(image_set, transform, args):
-    from data.dataset_refer_bert_t import ReferDataset
+    from data.dataset_refer_bert import ReferDataset
     ds = ReferDataset(args,
                       split=image_set,
                       image_transforms=transform,
