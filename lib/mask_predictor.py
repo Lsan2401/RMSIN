@@ -22,7 +22,6 @@ class SimpleDecoding(nn.Module):
 
         self.bn1_4 = nn.BatchNorm2d(hidden_size)
         self.relu1_4 = nn.ReLU()
-        self.conv2_4 = nn.Conv2d(hidden_size, hidden_size, 3, padding=1, bias=False)
         self.bn2_4 = nn.BatchNorm2d(hidden_size)
         self.relu2_4 = nn.ReLU()
 
@@ -32,7 +31,6 @@ class SimpleDecoding(nn.Module):
                                              kernel_size=3, padding=1, rounting_func=routing_function2, bias=False, kernel_number=4)
         self.bn1_3 = nn.BatchNorm2d(hidden_size)
         self.relu1_3 = nn.ReLU()
-        self.conv2_3 = nn.Conv2d(hidden_size, hidden_size, 3, padding=1, bias=False)
         self.bn2_3 = nn.BatchNorm2d(hidden_size)
         self.relu2_3 = nn.ReLU()
 
@@ -42,7 +40,6 @@ class SimpleDecoding(nn.Module):
                                              kernel_size=3, padding=1, rounting_func=routing_function3, bias=False, kernel_number=4)
         self.bn1_2 = nn.BatchNorm2d(hidden_size)
         self.relu1_2 = nn.ReLU()
-        self.conv2_2 = nn.Conv2d(hidden_size, hidden_size, 3, padding=1, bias=False)
         self.bn2_2 = nn.BatchNorm2d(hidden_size)
         self.relu2_2 = nn.ReLU()
 
