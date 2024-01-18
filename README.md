@@ -58,7 +58,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node
 
 ## Testing
 ```shell
-python test.py --swin_type base --dataset rrsisd --split val --workers 4 --window12 --img_size 480
+python test.py --swin_type base --dataset rrsisd --resume ./your_checkpoints_path --split val --workers 4 --window12 --img_size 480
 ```
 
 ## Acknowledgements
